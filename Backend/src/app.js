@@ -20,7 +20,8 @@ const corsOptions = {
     if (!origin) return callback(null, true);
     
     const allowedOrigins = [
-      'http://localhost:3000',           // Local development
+      'http://localhost:3000',  
+      'http://localhost:8080',         // Local development
       'http://127.0.0.1:3000',          // Alternative local
       'https://your-app-name.vercel.app', // Replace with your Vercel URL
       'https://*.vercel.app',            // All Vercel preview deployments
