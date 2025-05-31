@@ -9,7 +9,7 @@
 
   export async function getWhoisData(domain: string, type: string): Promise<WhoisResponse> {
     try {
-      const API_URL = 'http://localhost:5000/api/whois';
+      const API_URL = import.meta.env.VITE_APP_API_URL ||'http://localhost:5000/api/whois';
     
       const response = await fetch(`${API_URL}?domain=${encodeURIComponent(domain)}&type=${type}`, {
         method: 'GET',
